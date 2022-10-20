@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+<div>
+<table>
+<tr>
+<th>ID</th>
+<th>AUTHOR</th>
+<th>CONTENT</th>
+<th>RATING</th>
+<th>EDIT</th>
+<th>DELETE</th>
+</tr>
+  <tr>
+  <td><%= @post.id%></td>
+  <td><%= @post.author%></td>
+  <td>&nbsp;&nbsp;<%= @post.content%></td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= @post.rate%></td>
+  <td><%= link_to "<button>Edit</button>".html_safe, edit_post_path(@post) %></td>
+  <td><%= button_to "Delete", @post, method: :delete %></td>
+  </tr>
+</table>
+<br>
+</div>
+<%= link_to "<button>BACK TO ALL POSTS</button>".html_safe, posts_path %>

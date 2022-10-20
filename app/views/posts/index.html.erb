@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+<%= link_to  "New Post".html_safe, new_post_path %>
+<%= link_to  "Top Posts".html_safe, '/posts/topposts' %>
+<h4>All Posts</h4>
+<div>
+<table>
+<tr>
+<th>ID</th>
+<th>AUTHOR</th>
+<th>TITLE</th>
+<th>CONTENT</th>
+<th>RATING</th>
+<th>SHOW</th>
+</tr>
+  <% @posts.each do |post| %>
+  <tr>
+  <td>&nbsp;&nbsp;<%= post.id%>&nbsp;&nbsp;</td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= post.author%></td>
+  <td>&nbsp;&nbsp;<%= post.title%></td>
+  <td>&nbsp;&nbsp;<%= post.content%></td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= post.rate%></td>
+  <td><%= link_to "<button>Show</button>".html_safe, post %></td>
+  </tr>
+<% end %>
+</table>
+<br>
+</div>

@@ -1,0 +1,13 @@
+one:
+  title: 'First Title'
+  content: 'First Content'
+  author: 'First Author'
+  rate: 4
+  user_id: 990
+  id: 1
+two:
+  title: 'Second Title'
+  content: 'Second Content'
+  author: 'Second Author'
+  rate: 5
+  user_id: 991
